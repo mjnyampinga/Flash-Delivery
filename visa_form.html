@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Card Payment Form</title>
+    <link rel="stylesheet" href="mtn_form.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-header">
+            <h2>PayPal Payment Form</h2>
+        </div>
+    <form action="process_visa_payment.php" method="POST">
+        <label for="cardnumber">Card Number:</label>
+        <input type="text" id="cardnumber" name="cardnumber" required><br><br>
+        <label for="expiry">Expiry Date:</label>
+        <input type="text" id="expiry" name="expiry" placeholder="MM/YYYY" required><br><br>
+        <label for="cvv">CVV:</label>
+        <input type="password" id="cvv" name="cvv" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script src="mtn_form.js"></script>
+</body>
+</html>

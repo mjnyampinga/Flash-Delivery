@@ -1,0 +1,451 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: whitesmoke;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    color: #FF1493;
+    
+}
+
+header, footer {
+    background: white;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+
+    height: 110px;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    color: #FF1493;
+    text-decoration: none;
+}
+
+section {
+    padding: 40px 0;
+}
+
+#hero {
+    background: url('hero-bg.jpg') center/cover no-repeat;
+    color: black;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#hero h2 {
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #FF1493;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    
+
+}
+
+.btn:hover {
+    background: pink;
+}
+
+#products {
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+   
+    
+}
+
+.product {
+    width: calc(33.33% - 40px); /* Each product takes 33.33% width with margin */
+    margin: 20px 20px 0; /* Adjust margin as needed */
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-grow: 1; /* Allows products to grow and maintain equal width */
+    flex-basis: calc(33.33% - 40px); /* Initial width of each product */
+    display: inline-block;
+    vertical-align: top;
+    
+    
+
+    
+    
+}
+
+.product img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.product h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    
+}
+
+.product p {
+    color: #666;
+    
+
+}
+
+.product .price {
+    font-weight: bold;
+}
+
+.add-to-cart {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FF1493;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #FF1493;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    
+    #products {
+        justify-content: center;
+    }
+    
+    .product {
+        width: 100%; /* Products take full width on smaller screens */
+        margin: 20px 0; /* Adjust margin as needed */
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Added a semi-transparent background color */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    height: 50%;
+    max-height: 80%; /* Added maximum height to prevent modal from exceeding viewport */
+    overflow-y: auto; /* Allow vertical scrolling within modal content */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#cartItems {
+    list-style: none;
+    padding: 0;
+}
+
+#cartItems li {
+    margin-bottom: 10px;
+    
+}
+
+#cartTotal {
+    font-weight: bold;
+}
+
+#checkoutBtn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FF1493;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    /* Align the button to the center */
+    text-align: center;
+}
+
+#checkoutBtn:hover {
+    background-color: pink;
+}
+
+
+/* Search and Sort Styles */
+#searchInput,
+#sortSelect {
+    margin-bottom: 20px;
+}
+
+/* Contact Form Styles */
+form {
+    margin-top: 20px;
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #FF1493;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type='submit'] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #FF1493;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type='submit']:hover {
+    background-color: pink;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-cart-icons {
+    display: flex;
+}
+
+.user-cart-icons a {
+    margin-left: 10px;
+    color: #FF1493;
+}
+
+.user-cart-icons a:first-child {
+    margin-left: 0;
+}
+
+.user-cart-icons a#cart {
+    position: relative;
+}
+
+.user-cart-icons a#cart::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red; /* or any color you prefer for the notification dot */
+    border-radius: 50%;
+    top: -5px;
+    right: -5px;
+    display: none; /* hide by default */
+}
+
+/* Styling for person icon */
+.user-cart-icons a#login,
+.user-cart-icons a#register {
+    position: relative;
+}
+
+.user-cart-icons a#login::before,
+.user-cart-icons a#register::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: blue; /* or any color you prefer for the notification dot */
+    border-radius: 50%;
+    top: -5px;
+    right: -5px;
+    display: none; /* hide by default */
+}
+
+.user-cart-icons a#login:hover::before,
+.user-cart-icons a#register:hover::before {
+    display: block;
+}
+
+/* Your existing CSS styles */
+
+/* Styling for the cart icon */
+.user-cart-icons a#cart {
+    position: relative;
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.user-cart-icons a#cart i {
+    font-size: 24px; /* Adjust the font size of the icon */
+}
+
+.user-cart-icons a#cart img {
+    width: 100%;
+    height: 100%;
+}
+
+/* style.css */
+
+/* Existing CSS styles */
+
+header {
+    position: fixed;
+    width: 100%;
+    
+    z-index: 1000; /* Ensure the header stays on top */
+}
+
+section {
+    padding-top: 110px; /* Adjusted padding to accommodate fixed header */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens if needed */
+}
+
+/* Modal and other styles remain unchanged */
+/* location.css */
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.location iframe {
+    max-width: 100%; /* Ensure iframe doesn't exceed container width */
+}
+/* circle */
+.circle {
+    width: 50rem;
+    height: 50rem;
+    border-radius: 50%;
+    border: 1px solid #FF1493;
+
+    position: absolute;
+    top: -25rem;
+    left: -20rem;
+    z-index: -5;
+}
+.message {
+    color: #FF1493;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    /* Other styling properties for the image can be added here */
+}
+
+.logo {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.add-to-cart {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FF1493;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for smooth effect */
+}
+
+.add-to-cart:hover {
+    background-color: pink; /* Change background color on hover */
+}
+
+/* CSS */
+.cart-count {
+    position: absolute;
+    top: -10px; /* Adjust this value to move the count up or down */
+    right: 0;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 6px;
+    font-size: 12px;
+    transform: translateY(-100%);
+}

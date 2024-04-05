@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal Payment Form</title>
+    <link rel="stylesheet" href="mtn_form.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-header">
+            <h2>PayPal Payment Form</h2>
+        </div>
+        <form action="process_paypal_payment.php" method="POST">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <script src="mtn_form.js"></script>
+</body>
+</html>
